@@ -1,12 +1,13 @@
 import React from "react";
-import features from "../../mocks/features";
-import { GlobalStyle } from "./styled";
+import PageWrapper from "../layout/page-wrapper/page-prapper";
+import features from "/src/mocks/features";
+import { GlobalStyle } from "./styles";
 
 export default function App() {
   return (
     <>
-      <GlobalStyle/>
-      Test
+      <GlobalStyle />
+      <PageWrapper features={features}>Контент страницы</PageWrapper>
     </>
   );
 }
