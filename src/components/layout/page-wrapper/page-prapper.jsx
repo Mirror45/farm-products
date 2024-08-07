@@ -6,12 +6,12 @@ import Order from "/src/components/pages/order/order";
 import { Main } from "./styles";
 
 // Обёртка для контента страниц
-function PageWrapper({ children, features }) {
+function PageWrapper({ products }) {
   return (
     <>
       <Header />
       <Main>
-        <Order/>
+        <Order products={products} />
       </Main>
       <Footer />
     </>

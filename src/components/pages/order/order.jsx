@@ -11,7 +11,10 @@ import {
 } from "./styles";
 
 // Оформление заказа
-function Order() {
+function Order({
+  products
+}) {
+  console.log(products)
   return (
     <StyledOrder as="form">
       <LeftColumn>
