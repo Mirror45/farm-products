@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Panel from "/src/components/ui/panel/panel";
 import Title, { TitleSize } from "/src/components/ui/title/title";
 import ProductCart from "/src/components/ui/product-cart/product-cart";
 import Button from "/src/components/ui/button/button";
+import CheckboxList from "/src/components/ui/checkbox-list/checkbox-list";
 import {
   LeftColumn,
   StyledOrder,
   AddressInput,
   PriceLabel,
   PriceValue,
-  ProductSwiper
+  ProductSwiper,
+  CheckboxLabel
 } from "./styles";
 import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
@@ -20,6 +22,7 @@ SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 function Order({
   products // список продуктов
 }) {
+  const [selectProductIds, setSelectProductIds] = useState([]);
   return (
     <StyledOrder as="form">
       <LeftColumn>
@@ -27,7 +30,17 @@ function Order({
           <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={12}>
             Выберите продукты
           </Title>
-          Чекбокс со списком продуктов
+          <CheckboxList
+            labelComponent={CheckboxLabel}
+            name={"select-products"}
+            isGridList={false}
+            options={products.map((product) => ({
+              value: product.id,
+              title: product.name
+            }))}
+            selectValues={selectProductIds}
+            onChange={setSelectProductIds}
+          />
         </Panel>
         <Panel>
           <Title size={TitleSize.EXTRA_SMALL} marginBottom={24}>
@@ -39,7 +52,16 @@ function Order({
           <Button maxWidth>Купить</Button>
         </Panel>
       </LeftColumn>
-      <ProductSwiper>
+      <ProductSwiper
+        spaceBetween={12}
+        direction="vertical"
+        slidesPerView="auto"
+        scrollbar={{ draggable: true }}
+        mousewheel
+        pagination={{
+          type: "fanction"
+        }}
+      >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCart product={product} />
