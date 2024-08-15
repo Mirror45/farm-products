@@ -22,7 +22,13 @@ SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 function Order({
   products // список продуктов
 }) {
+  const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
+  const handleOnClickProduct = (value, index) => {
+    if (!selectProductIds.includes(value)) {
+      swiperRef.slideTo(index, 0);
+    }
+  };
   return (
     <StyledOrder as="form">
       <LeftColumn>
@@ -40,6 +46,7 @@ function Order({
             }))}
             selectValues={selectProductIds}
             onChange={setSelectProductIds}
+            onClickLabel={handleOnClickProduct}
           />
         </Panel>
         <Panel>
@@ -53,6 +60,7 @@ function Order({
         </Panel>
       </LeftColumn>
       <ProductSwiper
+        onSwiper={setSwiperRef}
         spaceBetween={12}
         direction="vertical"
         slidesPerView="auto"
