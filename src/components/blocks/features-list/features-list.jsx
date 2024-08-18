@@ -2,10 +2,11 @@ import React from "react";
 import FeatureCard from "/src/components/ui/feature-card/feature-card";
 import { Ul, Li } from "/src/components/styled";
 import { Features, StyledButton, StyledTitle } from "./styles";
+import { AppRoute } from "/src/const";
 
 // список преимуществ
 function FeaturesList({
-  features
+  features // преимущества - массив объектов с id, title, owner, isNegative, image, about
 }) {
   return features && features.length ? (
     <Features>
@@ -17,9 +18,7 @@ function FeaturesList({
           </Li>
         ))}
       </Ul>
-      <StyledButton link="/buy">Купить</StyledButton>
+      <StyledButton link={AppRoute.ORDER}>Купить</StyledButton>
     </Features>
   ) : null;
 }
-
-export default FeaturesList;
