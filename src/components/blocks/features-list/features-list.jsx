@@ -22,3 +22,5 @@ function FeaturesList({
     </Features>
   ) : null;
 }
+
+export default FeaturesList;
