@@ -1,43 +1,56 @@
-# Проект «Фермерские продукты»
+# 🥕 Farm Products
 
-## О проекте
+**Farm Products** is a fictional single-page application (SPA) for an online farmer’s market. It offers users an intuitive interface to browse fresh organic goods, apply filters to find exactly what they need, and place an order with a specified delivery address.
 
-«Магазин фермерских продуктов» - это SPA приложение для покупки продуктов.
-- Главная страница с описанием преимуществ «Фермерских продуктов»
-- Страница каталога с возможностью выбора всех возможных фильтров
-- В проекте реализована возможность оформить заказ и указать адрес доставки
+---
 
-### Типовые задачи, которые пришлось решить во время разработки:
+## 🗂️ About the Project
 
-- Проект являеться Single Page Application (SPA).
-- Создание React-компонентов  на JSX.
-- Стилизация компонентов на CSS-in-JS с использованием Styled-components.
-- Создание интерактивных компонентов.
-- Настройка роутинга для перехода между страницами.
-- Сборка Storybook.
+The application consists of:
 
-## Установка 🛠
+- 🏠 **Main Page** — highlights the key advantages of the farm shop and promotes eco-friendly products  
+- 🛒 **Catalog Page** — allows users to browse all available goods and apply filters by category, price, and more  
+- 📦 **Order Section** — enables users to place an order and provide a delivery address  
+- ⚙️ **SPA Architecture** — built using React and React Router for seamless page transitions
 
-1. Сначала требуется склонировать проект на ваш пк
+### ✅ Key Features
 
-```
-  git clone git@github.com:Mirror45/farm-products.git
-```
+- Built with **React + JSX**
+- Styled using **Styled Components** (CSS-in-JS)
+- Fully interactive UI with state management
+- Routing via **React Router v6**
 
-2. Переходим в только что склонированный репозиторий
+> ⚠️ The project is **not responsive** and optimized for desktop screens only.
 
-```
- cd farm-products
-```
+---
 
-3. Устанавливаем все зависимости
+## 🛠 Tech Stack
 
-```
- npm i
-```
+### 🚀 Core Technologies
 
-4. Запускаем проект на локальном хосте
+| Technology              | Purpose                                           |
+|-------------------------|---------------------------------------------------|
+| **React**               | Build the user interface                         |
+| **React Router DOM v6** | Client-side navigation and routing                |
+| **Styled Components**   | Component-scoped styling (CSS-in-JS)             |
+| **CRA**                 | Project setup and configuration base             |
 
-```
- npm start
+---
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+# Clone the repository
+git clone git@github.com:Mirror45/farm-products.git
+
+# Navigate into the project directory
+cd farm-products
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
 ```
