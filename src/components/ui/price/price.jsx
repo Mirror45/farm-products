@@ -6,10 +6,9 @@ const formatPrice = (value) => {
   return roundedPrice.toString().replace(/(\d)(?=(\d\d\d)+$)/, "$1 ");
 };
 
-// Отформатированная цена
 function Price({ value, className }) {
   return (
-    <StyledPrice className={className}>{formatPrice(value)} руб.</StyledPrice>
+    <StyledPrice className={className}>{formatPrice(value)} $</StyledPrice>
   );
 }
 

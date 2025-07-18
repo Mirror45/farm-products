@@ -8,12 +8,11 @@ import { useLocation } from "react-router-dom";
 const links = [
   {
     to: AppRoute.MAIN,
-    item: <StyledButton link={AppRoute.MAIN}>Главная</StyledButton>
+    item: <StyledButton link={AppRoute.MAIN}>Home</StyledButton>
   },
-  { to: AppRoute.ORDER, item: <Button link={AppRoute.ORDER}>Купить</Button> }
+  { to: AppRoute.ORDER, item: <Button link={AppRoute.ORDER}>Buy</Button> }
 ];
 
-// навигация
 function Nav() {
   const pageUrl = useLocation().pathname;
 

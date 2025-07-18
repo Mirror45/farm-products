@@ -1,39 +1,39 @@
 const features = [
   {
     id: 0,
-    title: "Еда намного вкуснее",
-    owner: "Фермерские продукты",
+    title: "Food tastes much better",
+    owner: "Farm products",
     isNegative: false,
     image: "https://i.ibb.co/xGg2GfP/eat-1.png",
     about:
-      "Домашняя колбаса из&nbsp;мяса, соли и&nbsp;специй и&nbsp;колбаса из&nbsp;магазина&nbsp;&mdash; два настолько разных продукта, что они даже не&nbsp;родственники"
+      "Homemade sausage made from meat, salt, and spices and store-bought sausage are so different that they’re not even related."
   },
   {
     id: 1,
-    title: "Просроченные продукты",
-    owner: "Магазинные продукты",
+    title: "Expired products",
+    owner: "Store products",
     isNegative: true,
     image: "https://i.ibb.co/rHt4pHQ/garbage-1.png",
     about:
-      "Из-за большого количество товара сотрудники магазинов не&nbsp;успевают своевременно производить замену товара"
+      "Due to the large quantity of goods, store employees often fail to replace expired items in time."
   },
   {
     id: 3,
-    title: "Натуральные продукты",
-    owner: "Фермерские продукты",
+    title: "Natural products",
+    owner: "Farm products",
     isNegative: false,
     image: "https://i.ibb.co/TryK8n2/sprout-1.png",
     about:
-      "Поставляем местные органические продукты, выращенные без пестицидов и&nbsp;химических удобрений."
+      "We deliver local organic products grown without pesticides or chemical fertilizers."
   },
   {
     id: 4,
-    title: "Некачественное мясо",
-    owner: "Магазинные продукты",
+    title: "Low-quality meat",
+    owner: "Store products",
     isNegative: true,
     image: "https://i.ibb.co/d63ZBPp/no-meat-1.png",
     about:
-      "Мясные полуфабрикаты, в&nbsp;которых содержится чрезмерно много натрия, вредных жиров, консервантов"
+      "Meat semi-finished products that contain excessive sodium, harmful fats, and preservatives."
   }
 ];
 

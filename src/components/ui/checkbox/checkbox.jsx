@@ -1,7 +1,6 @@
 import React from "react";
 import { Label, VisuallyHiddenInput } from "/src/components/styled";
 
-// чекбокс
 function Checkbox({
   onClick,
   labelComponent,

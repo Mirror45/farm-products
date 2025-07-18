@@ -9,7 +9,6 @@ import products from "/src/mocks/products";
 import ScrollTop from "/src/components/ui/scroll-top/scroll-top";
 import { GlobalStyle } from "./styles";
 
-// Корневой компонент всего приложения
 function App() {
   return (
     <>

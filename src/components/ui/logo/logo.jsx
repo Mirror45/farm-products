@@ -4,19 +4,18 @@ import { Text, StyledLogo, StyledLogoMainPage } from "./styles";
 import { AppRoute } from "/src/const";
 import { useLocation } from "react-router-dom";
 
-// Логотип сайта с названием
 function Logo() {
   const { pathname } = useLocation();
 
   return pathname === AppRoute.MAIN ? (
     <StyledLogoMainPage>
       <ReactComponent />
-      <Text>Фермерские продукты</Text>
+      <Text>Farm products</Text>
     </StyledLogoMainPage>
   ) : (
     <StyledLogo to={AppRoute.MAIN}>
       <ReactComponent />
-      <Text>Фермерские продукты</Text>
+      <Text>Farm products</Text>
     </StyledLogo>
   );
 }
