@@ -19,9 +19,8 @@ import SwiperCore, { Pagination, Mousewheel, Scrollbar } from "swiper/core";
 import "swiper/swiper-bundle.min.css";
 SwiperCore.use([Mousewheel, Pagination, Scrollbar]);
 
-// Оформление заказа
 function Order({
-  products // список продуктов
+  products
 }) {
   const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
@@ -40,18 +39,18 @@ function Order({
   const [address, setAddress] = useState("");
   const handleBuyClick = () => {
     // eslint-disable-next-line no-alert
-    alert(`Спасибо за заказ, вы купили:\n${selectProducts.map(
-      (product) => `${product.name} - ${product.price} руб.\n`
+    alert(`Thank you for your order, you bought:\n${selectProducts.map(
+      (product) => `${product.name} - ${product.price} $\n`
     )}
-    Итого: ${fullPrice} руб.
-    Доставка по адресу: ${address}.`);
+    Total: ${fullPrice} $
+    Delivery to the address: ${address}.`);
   };
   return products && products.length ? (
     <StyledOrder as="form">
       <LeftColumn>
         <Panel marginBottom={20} paddingTop={24} paddingBottom={10}>
           <Title as="h2" size={TitleSize.EXTRA_SMALL} marginBottom={12}>
-            Выберите продукты
+            Choose products
           </Title>
           <CheckboxList
             labelComponent={CheckboxLabel}
@@ -68,21 +67,21 @@ function Order({
         </Panel>
         <Panel>
           <Title size={TitleSize.EXTRA_SMALL} marginBottom={24}>
-            Сделать заказ
+            Place order
           </Title>
           <AddressInput
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            placeholder="Введите адрес доставки"
+            placeholder="Enter delivery address"
           />
-          <PriceLabel as="span">Цена</PriceLabel>
+          <PriceLabel as="span">Price</PriceLabel>
           <PriceValue value={fullPrice} />
           <Button
             maxWidth
             onClick={handleBuyClick}
             disabled={!(selectProductIds.length && address)}
           >
-            Купить
+            Buy
           </Button>
         </Panel>
       </LeftColumn>
@@ -105,7 +104,7 @@ function Order({
       </ProductSwiper>
     </StyledOrder>
   ) : (
-    "Продукты были слишком вкусные и их разобрали."
+    "The products were too delicious and have sold out."
   );
 }
 

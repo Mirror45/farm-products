@@ -2,18 +2,14 @@ import React from "react";
 import Title, { TitleSize } from "/src/components/ui/title/title";
 import { Text, StyledAbout } from "./styles";
 
-// Раздел о магазине фермерских продуктов
 function About() {
   return (
     <StyledAbout>
       <Title size={TitleSize.BIG}>
-        {" "}
-        Магазин фермерских продуктов с доставкой
+        Farm Products Store with Delivery
       </Title>
       <Text>
-        Все продукты изготавливаются под заказ. Фермеры начинают готовить
-        продукты за день до отправки заказа клиентам. Именно поэтому мы
-        принимаем заказы заранее и доставляем продукты максимально свежими.
+        All products are made to order. Farmers start preparing the products the day before the order is shipped to customers. That’s why we accept orders in advance and deliver the products as fresh as possible.
       </Text>
     </StyledAbout>
   );

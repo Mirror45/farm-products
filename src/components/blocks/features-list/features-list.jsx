@@ -4,13 +4,12 @@ import { Ul, Li } from "/src/components/styled";
 import { Features, StyledButton, StyledTitle } from "./styles";
 import { AppRoute } from "/src/const";
 
-// список преимуществ
 function FeaturesList({
-  features // преимущества - массив объектов с id, title, owner, isNegative, image, about
+  features
 }) {
   return features && features.length ? (
     <Features>
-      <StyledTitle as="h2">Почему фермерские продукты лучше?</StyledTitle>
+      <StyledTitle as="h2">Why are farm products better?</StyledTitle>
       <Ul $isGridList>
         {features.map((feature) => (
           <Li key={feature.id}>
@@ -18,7 +17,7 @@ function FeaturesList({
           </Li>
         ))}
       </Ul>
-      <StyledButton link={AppRoute.ORDER}>Купить</StyledButton>
+      <StyledButton link={AppRoute.ORDER}>Buy</StyledButton>
     </Features>
   ) : null;
 }

@@ -8,15 +8,15 @@ import OptionsList from "/src/components/ui/options-list/options-list";
 function ProductCart({ product }) {
   const tabsList = [
     {
-      title: "Oписание",
+      title: "Description",
       content: product.description
     },
     {
-      title: "Характеристики",
+      title: "Specifications",
       content: <OptionsList list={product.specifications} />
     },
     {
-      title: "Свойства",
+      title: "Properties",
       content: <OptionsList list={product.structure} />
     }
   ];
@@ -29,7 +29,7 @@ function ProductCart({ product }) {
         </ProductTitle>
         <Tabs maxContentHeiht="105px" tabsList={tabsList} />
         <Price>
-          {product.price} руб. / {product.weight} гр.
+          {product.price} $ / {product.weight} g.
         </Price>
       </ContentWrapper>
     </Panel>
